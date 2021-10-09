@@ -14,4 +14,6 @@ class FlipFlap
     outputs = method_names.select { |method| method.match(/^take_/) }
     outputs ? outputs.map { |method| method[5..-1] } : []
   end
+
+  include TsvBuddy, YamlBuddy
 end
